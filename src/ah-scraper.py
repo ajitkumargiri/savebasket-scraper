@@ -1,10 +1,10 @@
 from playwright.sync_api import sync_playwright
 import json
-import os
 import time
+from datetime import datetime
 
 BASE_URL = "https://www.ah.nl/producten/1730/zuivel-eieren?page={}"
-MAX_PAGES = 20
+MAX_PAGES = 50   # adjust if needed
 
 
 def scrape_page(page, page_num):
@@ -13,58 +13,71 @@ def scrape_page(page, page_num):
 
     page.goto(url, timeout=60000)
 
-    page.wait_for_timeout(8000)
-    page.mouse.wheel(0, 3000)
-    page.wait_for_timeout(3000)
+    # wait for your exact selector
+    try:
+        page.wait_for_selector('[data-testid="product-card-vertical-container"]', timeout=60000)
+    except:
+        print("⚠️ No products found (maybe blocked or end)")
+        return []
 
     items = page.query_selector_all('[data-testid="product-card-vertical-container"]')
-
     print(f"Found {len(items)} products")
 
-    data = []
+    results = []
 
     for item in items:
         try:
-            name_el = item.query_selector('.product-card-content_title__VNanP')
-            name = name_el.inner_text().strip() if name_el else ""
+            # name
+            name_el = item.query_selector('p[data-testid="product-card-title"], p.typography_body-regular__Vnq4U')
+            name = name_el.inner_text().strip() if name_el else None
 
-            whole_el = item.query_selector('.current-price_root__8Ka3V p')
-            frac_el = item.query_selector('.current-price_cents__VCUS4')
+            # price
+            price_whole = item.query_selector('.current-price_root__8Ka3V p')
+            price_decimal = item.query_selector('.current-price_cents__VCUS4')
 
-            if whole_el and frac_el:
-                price = float(whole_el.inner_text().strip() + "." + frac_el.inner_text().strip())
+            if price_whole and price_decimal:
+                price = f"{price_whole.inner_text().strip()}.{price_decimal.inner_text().strip()}"
             else:
                 price = None
 
-            unit_el = item.query_selector('[data-testid="product-card-price-description"]')
-            unit = unit_el.inner_text().strip() if unit_el else ""
+            # size
+            size_el = item.query_selector('[data-testid="product-card-price-description"]')
+            size = size_el.inner_text().strip() if size_el else None
 
-            link_el = item.query_selector('a.product-card-container_linkContainer__P3Zzz')
-            link = link_el.get_attribute("href") if link_el else ""
-            if link:
-                link = "https://www.ah.nl" + link
+            # link
+            link_el = item.query_selector('a[href]')
+            link = "https://www.ah.nl" + link_el.get_attribute("href") if link_el else None
 
-            data.append({
+            # image
+            img_el = item.query_selector('img')
+            image = img_el.get_attribute("src") if img_el else None
+
+            results.append({
                 "name": name,
                 "price": price,
-                "unit": unit,
-                "url": link
+                "size": size,
+                "link": link,
+                "image": image,
+                "store": "AH"
             })
 
-        except Exception:
-            continue
+        except Exception as e:
+            print("Error parsing item:", e)
 
-    return data
+    return results
 
 
 def run():
-    os.makedirs("output", exist_ok=True)
-    all_data = []
+    all_products = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False,
-            args=["--no-sandbox", "--disable-blink-features=AutomationControlled"]
+            headless=True,   # ✅ IMPORTANT FOR VPS
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled"
+            ]
         )
 
         context = browser.new_context(
@@ -81,15 +94,20 @@ def run():
                 print("No more data, stopping.")
                 break
 
-            all_data.extend(data)
-            time.sleep(2)
+            all_products.extend(data)
+
+            time.sleep(2)  # avoid blocking
 
         browser.close()
 
-    with open("output/ah.json", "w") as f:
-        json.dump(all_data, f, indent=2)
+    # save with timestamp
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    filename = f"output/ah_{timestamp}.json"
 
-    print(f"\nTotal products scraped: {len(all_data)}")
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(all_products, f, indent=2, ensure_ascii=False)
+
+    print(f"\n✅ Saved {len(all_products)} products to {filename}")
 
 
 if __name__ == "__main__":
