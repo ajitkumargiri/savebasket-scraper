@@ -2,87 +2,97 @@ from playwright.sync_api import sync_playwright
 import json
 import os
 import time
-from datetime import datetime
 
 BASE_URL = "https://www.ah.nl/producten/1730/zuivel-eieren?page={}"
-MAX_PAGES = 20   # increase later
+MAX_PAGES = 10
 
 
 def scrape_page(page, page_num):
     url = BASE_URL.format(page_num)
-    print(f"\n🔎 Scraping page {page_num}...")
+    print(f"Scraping page {page_num}...")
 
-    page.goto(url, timeout=60000)
+    page.goto(url)
 
-    # ✅ Accept cookies
-    try:
-        page.click('button:has-text("Akkoord")', timeout=5000)
-        print("✔ Cookies accepted")
-    except:
-        pass
-
-    # ✅ Wait for page load
+    # ✅ IMPORTANT FIX (not selector issue)
     page.wait_for_load_state("domcontentloaded")
+    page.wait_for_timeout(8000)   # AH needs time
 
-    # ✅ IMPORTANT: wait for carousel (parent container)
-    try:
-        page.wait_for_selector('div[class*="carousel"]', timeout=60000)
-    except:
-        print("⚠ Carousel not found")
-
-    # buffer for JS rendering
-    page.wait_for_timeout(4000)
-
-    # ✅ Your correct selector
+    # ✅ YOUR EXACT selector
     items = page.query_selector_all('[data-testid="product-card-vertical-container"]')
 
-    print(f"✔ Found {len(items)} products")
+    print(f"Found {len(items)} products")
 
     data = []
 
     for item in items:
         try:
             # name
-            name_el = item.query_selector('.product-card-content_title__VNanP')
+            name = item.query_selector(
+                '.product-card-content_title__VNanP'
+            ).inner_text().strip()
 
             # price
-            whole_el = item.query_selector('[data-testid="product-card-current-price"] p')
-            frac_el = item.query_selector('[data-testid="product-card-current-price"] sup')
+            whole = item.query_selector(
+                '.current-price_root__8Ka3V p'
+            ).inner_text().strip()
+
+            frac = item.query_selector(
+                '.current-price_cents__VCUS4'
+            ).inner_text().strip()
+
+            price = float(f"{whole}.{frac}")
 
             # unit
-            unit_el = item.query_selector('[data-testid="product-card-price-description"]')
+            unit_el = item.query_selector(
+                '[data-testid="product-card-price-description"]'
+            )
+            unit = unit_el.inner_text().strip() if unit_el else ""
 
             # link
-            link_el = item.query_selector("a[href]")
+            link_el = item.query_selector(
+                'a.product-card-container_linkContainer__P3Zzz'
+            )
+            link = link_el.get_attribute("href") if link_el else ""
+            link = "https://www.ah.nl" + link if link else ""
 
-            # image
-            # ✅ Stop when no more data
+            data.append({
+                "name": name,
+                "price": price,
+                "unit": unit,
+                "url": link
+            })
+
+        except Exception as e:
+            continue
+
+    return data
+
+
+def run():
+    os.makedirs("output", exist_ok=True)
+
+    all_data = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+
+        for i in range(1, MAX_PAGES + 1):
+            data = scrape_page(page, i)
+
             if not data:
-                print("🛑 No more products → stopping")
+                print("No data, stopping")
                 break
 
             all_data.extend(data)
-
-            # polite delay
             time.sleep(2)
 
         browser.close()
 
-    # ✅ Save with timestamp
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    file_name = f"output/ah_dairy_{timestamp}.json"
-
-    with open(file_name, "w") as f:
+    with open("output/ah.json", "w") as f:
         json.dump(all_data, f, indent=2)
 
-    # latest file
-    with open("output/ah_dairy_latest.json", "w") as f:
-        json.dump(all_data, f, indent=2)
-
-    print("\n========================")
-    print(f"✅ TOTAL PRODUCTS: {len(all_data)}")
-    print(f"📁 Saved: {file_name}")
-    print("========================")
+    print(f"Total products: {len(all_data)}")
 
 
 if __name__ == "__main__":
