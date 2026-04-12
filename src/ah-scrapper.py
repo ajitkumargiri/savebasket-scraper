@@ -1,39 +1,36 @@
 from playwright.sync_api import sync_playwright
-import json
+import json, os, time
+from datetime import datetime
 
-def scrape_ah():
+URL = "https://www.ah.nl/producten/1730/zuivel-eieren"
 
-    url = "https://www.ah.nl/producten/1355/bakkerij"
+def run():
+    os.makedirs("output", exist_ok=True)
+    all_data = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        print("Opening page...")
-        page.goto(url, timeout=60000)
+        page.goto(URL, timeout=60000)
+        page.wait_for_load_state("domcontentloaded")
 
-        # wait for products
-        page.wait_for_selector('[data-testhook="product-card"]')
-
-        # scroll to load more
-        for _ in range(6):
+        # 🔥 SCROLL TO LOAD ALL PRODUCTS
+        for _ in range(20):
             page.mouse.wheel(0, 5000)
-            page.wait_for_timeout(1500)
+            page.wait_for_timeout(2000)
 
         items = page.query_selector_all('[data-testhook="product-card"]')
-
         print(f"Found {len(items)} products")
 
-        data = []
-
-        for item in items[:50]:
+        for item in items:
             try:
                 name = item.query_selector('[data-testhook="product-title"]').inner_text()
                 price = item.query_selector('[data-testhook="price"]').inner_text()
 
-                data.append({
+                all_data.append({
                     "store": "AH",
-                    "category": "bakkerij",
+                    "category": "dairy_eggs",
                     "name": name.strip(),
                     "price": price.strip()
                 })
@@ -42,16 +39,11 @@ def scrape_ah():
 
         browser.close()
 
-        return data
+    file = f"output/ah_{datetime.now().strftime('%Y-%m-%d_%H-%M')}.json"
+    with open(file, "w") as f:
+        json.dump(all_data, f, indent=2)
 
-
-def run():
-    data = scrape_ah()
-
-    with open("ah_bakkerij.json", "w") as f:
-        json.dump(data, f, indent=2)
-
-    print(f"\nSaved {len(data)} products")
+    print(f"Saved {len(all_data)} products")
 
 
 if __name__ == "__main__":
