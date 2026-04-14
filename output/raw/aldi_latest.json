@@ -1,0 +1,386 @@
+[
+  {
+    "brand": "MILSANI",
+    "name": "yo to go banaan",
+    "price": 0.99,
+    "quantity": "200 g",
+    "link": "https://www.aldi.nl/product/yo-to-go-banaan-1237742",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "yo to go aardbei",
+    "price": 0.99,
+    "quantity": "200 g",
+    "link": "https://www.aldi.nl/product/yo-to-go-aardbei-1237741",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "high protein drinkyoghurt aardbei",
+    "price": 1.79,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/high-protein-drinkyoghurt-aardbei-1236610",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "high protein drinkyoghurt mango",
+    "price": 1.79,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/high-protein-drinkyoghurt-mango-1236609",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "romige kwark",
+    "price": 1.89,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/romige-kwark-1235974",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "drinkyoghurt",
+    "price": 1.34,
+    "quantity": "850 ml",
+    "link": "https://www.aldi.nl/product/drinkyoghurt-1235493",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "skyr met fruit",
+    "price": 0.69,
+    "quantity": "150 g",
+    "link": "https://www.aldi.nl/product/skyr-met-fruit-1235289",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "vruchtenkwark to-go",
+    "price": 1.68,
+    "quantity": "Inhoud: 4 stuks, 320 g",
+    "link": "https://www.aldi.nl/product/vruchtenkwark-to-go-1234748",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "biologische yoghurt met muesli",
+    "price": 0.99,
+    "quantity": "150 g",
+    "link": "https://www.aldi.nl/product/biologische-yoghurt-met-muesli-1234620",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "high protein drink",
+    "price": 1.19,
+    "quantity": "330 ml",
+    "link": "https://www.aldi.nl/product/high-protein-drink-1230851",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "high protein pouch",
+    "price": 1.29,
+    "quantity": "200 g",
+    "link": "https://www.aldi.nl/product/high-protein-pouch-1229380",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "bio yoghurt 500g",
+    "price": 1.19,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/bio-yoghurt-500g-1228852",
+    "store": "ALDI"
+  },
+  {
+    "brand": "",
+    "name": "mega scharreleieren",
+    "price": 3.99,
+    "quantity": "10 stuks",
+    "link": "https://www.aldi.nl/product/mega-scharreleieren-1216651",
+    "store": "ALDI"
+  },
+  {
+    "brand": "",
+    "name": "vrije uitloop eieren",
+    "price": 1.43,
+    "quantity": "6 stuks",
+    "link": "https://www.aldi.nl/product/vrije-uitloop-eieren-1211171",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "eieren",
+    "price": 2.39,
+    "quantity": "6 stuks",
+    "link": "https://www.aldi.nl/product/eieren-1211124",
+    "store": "ALDI"
+  },
+  {
+    "brand": "",
+    "name": "scharreleieren",
+    "price": 3.74,
+    "quantity": "12 stuks",
+    "link": "https://www.aldi.nl/product/scharreleieren-1203024",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "houdbare halfvolle melk",
+    "price": 1.28,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/houdbare-halfvolle-melk-1228871",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "houdbare volle melk",
+    "price": 1.45,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/houdbare-volle-melk-1228844",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "yoghurtdrink aardbei",
+    "price": 1.18,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/yoghurtdrink-aardbei-1227456",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "yoghurtdrink rood fruit",
+    "price": 1.18,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/yoghurtdrink-rood-fruit-1227455",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "sojadrink ongezoet",
+    "price": 0.88,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/sojadrink-ongezoet-1226731",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "sojadrink naturel",
+    "price": 0.69,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/sojadrink-naturel-1226726",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "halfvolle chocolademelk",
+    "price": 0.89,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/halfvolle-chocolademelk-1225309",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "houdbare volle melk",
+    "price": 0.98,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/houdbare-volle-melk-1225306",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "houdbare magere melk",
+    "price": 0.79,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/houdbare-magere-melk-1225298",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "volle chocolademelk",
+    "price": 0.99,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/volle-chocolademelk-1225276",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "houdbare halfvolle melk",
+    "price": 0.84,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/houdbare-halfvolle-melk-1225274",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "milkshake aardbei of vanille",
+    "price": 0.99,
+    "quantity": "200 ml",
+    "link": "https://www.aldi.nl/product/milkshake-aardbei-of-vanille-1224973",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "biologische amandeldrink",
+    "price": 1.48,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/biologische-amandeldrink-1235384",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "kokosgurt",
+    "price": 1.85,
+    "quantity": "400 g",
+    "link": "https://www.aldi.nl/product/kokosgurt-1234405",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "vegan sojayoghurt",
+    "price": 1.69,
+    "quantity": "1 kg",
+    "link": "https://www.aldi.nl/product/vegan-sojayoghurt-1227009",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "sojadrink ongezoet",
+    "price": 0.88,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/sojadrink-ongezoet-1226731",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "sojadrink naturel",
+    "price": 0.69,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/sojadrink-naturel-1226726",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "haverdrink",
+    "price": 1.35,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/haverdrink-1215009",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "barista haverdrink",
+    "price": 1.59,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/barista-haverdrink-1212079",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MY VAY",
+    "name": "amandeldrink ongezoet",
+    "price": 1.49,
+    "quantity": "1 l",
+    "link": "https://www.aldi.nl/product/amandeldrink-ongezoet-1203650",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BLUE BAND",
+    "name": "halvarine",
+    "price": null,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/halvarine-1225913",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "smeerbaar met roomboter",
+    "price": 2.19,
+    "quantity": "250 g",
+    "link": "https://www.aldi.nl/product/smeerbaar-met-roomboter-1225625",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "bak braad",
+    "price": 1.79,
+    "quantity": "500 ml",
+    "link": "https://www.aldi.nl/product/bak-en-braad-1225312",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "margarine bewust",
+    "price": 1.76,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/margarine-bewust-1225303",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "bak braad bewust",
+    "price": 1.99,
+    "quantity": "500 ml",
+    "link": "https://www.aldi.nl/product/bak-en-braad-bewust-1225293",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "bewust light",
+    "price": 1.35,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/bewust-light-1225291",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "gezouten roomboter",
+    "price": 1.69,
+    "quantity": "250 g",
+    "link": "https://www.aldi.nl/product/gezouten-roomboter-1225287",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "halvarine",
+    "price": 0.55,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/halvarine-1225280",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "bakken braden olijf",
+    "price": 2.49,
+    "quantity": "500 ml",
+    "link": "https://www.aldi.nl/product/bakken-en-braden-olijf-1225275",
+    "store": "ALDI"
+  },
+  {
+    "brand": "MILSANI",
+    "name": "roomboter",
+    "price": 1.55,
+    "quantity": "250 g",
+    "link": "https://www.aldi.nl/product/roomboter-1225272",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BELLASAN",
+    "name": "goede basis",
+    "price": 1.14,
+    "quantity": "500 g",
+    "link": "https://www.aldi.nl/product/goede-basis-1225270",
+    "store": "ALDI"
+  },
+  {
+    "brand": "BIO",
+    "name": "biologische roomboter",
+    "price": 3.19,
+    "quantity": "250 g",
+    "link": "https://www.aldi.nl/product/biologische-roomboter-1220331",
+    "store": "ALDI"
+  }
+]
