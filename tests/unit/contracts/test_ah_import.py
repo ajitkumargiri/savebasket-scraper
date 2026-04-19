@@ -14,7 +14,8 @@ def test_ah_import_payload_validates() -> None:
         records=[
             AhProductRecord(
                 source_id="ah-1",
-                category="dairy",
+                category_group="zuivel-boter-en-eieren",
+                category="yoghurt",
                 original_name="AH Magere Yoghurt 1L",
                 normalized_name="ah magere yoghurt 1 l",
                 price_amount=1.49,
@@ -26,4 +27,5 @@ def test_ah_import_payload_validates() -> None:
         ],
     )
 
+    assert payload.records[0].category_group == 'zuivel-boter-en-eieren'
     assert payload.records[0].price_amount == 1.49

@@ -13,6 +13,7 @@ class AhProductRecord(BaseModel):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
     source_id: str | None = None
+    category_group: str | None = None
     category: str | None = None
     original_name: str = Field(min_length=1)
     normalized_name: str = Field(min_length=1)

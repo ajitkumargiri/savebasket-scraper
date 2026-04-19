@@ -1,0 +1,31 @@
+[
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-1",
+    "original_name": "Coca-Cola Zero 1,5L",
+    "price": "2.39",
+    "captured_at": "2026-04-19T10:00:00Z",
+    "category": "Frisdrank en sappen",
+    "brand": "Coca-Cola",
+    "product_url": "https://www.jumbo.com/producten/coca-cola-zero-15l"
+  },
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-2",
+    "original_name": "Croissant 4 stuks",
+    "price": "1.99",
+    "captured_at": "2026-04-19T10:01:00Z",
+    "category": "Brood en gebak",
+    "brand": "Jumbo",
+    "product_url": "https://www.jumbo.com/producten/croissant-4-stuks"
+  },
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-bad-1",
+    "price": "3.49",
+    "captured_at": "2026-04-19T10:02:00Z",
+    "category": "Zuivel, boter en eieren",
+    "brand": "Jumbo",
+    "product_url": "https://www.jumbo.com/producten/eieren-10-stuks"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "store": "ALDI",
+    "source_id": "aldi-1",
+    "original_name": "Campina Halfvolle Melk 1L",
+    "price": "€ 1,89",
+    "captured_at": "2026-04-19T09:00:00Z",
+    "category": "Zuivel en eieren",
+    "brand": "Campina",
+    "product_url": "https://www.aldi.nl/product/halfvolle-melk"
+  },
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-1",
+    "original_name": "Coca-Cola Zero 1,5L",
+    "price": "2.39",
+    "captured_at": "2026-04-19T09:01:00Z",
+    "category": "Frisdrank en sappen",
+    "brand": "Coca-Cola",
+    "product_url": "https://www.jumbo.com/producten/coca-cola-zero-15l"
+  },
+  {
+    "store": "Vomar",
+    "source_id": "vomar-1",
+    "original_name": "Volkoren Brood 800g",
+    "price": "€2,29",
+    "captured_at": "2026-04-19T09:02:00Z",
+    "category": "Brood en gebak",
+    "brand": "Vomar",
+    "product_url": "https://www.vomar.nl/product/volkoren-brood"
+  },
+  {
+    "store": "ah",
+    "source_id": "ah-1",
+    "original_name": "AH Magere Yoghurt 1L",
+    "price": "1,49",
+    "captured_at": "2026-04-19T09:03:00Z",
+    "category": "Zuivel, boter en eieren",
+    "brand": "AH",
+    "product_url": "https://www.ah.nl/producten/product/wi123"
+  },
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-2",
+    "original_name": "Croissant 4 stuks",
+    "price": "1.99",
+    "captured_at": "2026-04-19T09:04:00Z",
+    "category": "Brood en gebak",
+    "brand": "Jumbo",
+    "product_url": "https://www.jumbo.com/producten/croissant-4-stuks"
+  },
+  {
+    "store": "ALDI",
+    "source_id": "aldi-2",
+    "original_name": "Appelsap 6 x 200 ml",
+    "price": "€2,79",
+    "captured_at": "2026-04-19T09:05:00Z",
+    "category": "Frisdrank en sappen",
+    "brand": "ALDI",
+    "product_url": "https://www.aldi.nl/product/appelsap-6x200ml"
+  },
+  {
+    "store": "Vomar",
+    "source_id": "vomar-2",
+    "original_name": "Kaasplakken Jong 150 gram",
+    "price": "2,59",
+    "captured_at": "2026-04-19T09:06:00Z",
+    "category": "Zuivel, boter en eieren",
+    "brand": "Vomar",
+    "product_url": "https://www.vomar.nl/product/kaasplakken-jong"
+  },
+  {
+    "store": "Albert Heijn",
+    "source_id": "ah-2",
+    "original_name": "Havermout Drink 1 l",
+    "price": "€2.19",
+    "captured_at": "2026-04-19T09:07:00Z",
+    "category": "Dranken",
+    "brand": "AH",
+    "product_url": "https://www.ah.nl/producten/product/wi456"
+  },
+  {
+    "store": "Jumbo",
+    "source_id": "jumbo-3",
+    "original_name": "Eieren 10 stuks",
+    "price": "3,49",
+    "captured_at": "2026-04-19T09:08:00Z",
+    "category": "Zuivel, boter en eieren",
+    "brand": "Jumbo",
+    "product_url": "https://www.jumbo.com/producten/eieren-10-stuks"
+  },
+  {
+    "store": "ALDI",
+    "source_id": "aldi-3",
+    "original_name": "Koffiebonen 1 kg",
+    "price": "9.99",
+    "captured_at": "2026-04-19T09:09:00Z",
+    "category": "Koffie en thee",
+    "brand": "ALDI",
+    "product_url": "https://www.aldi.nl/product/koffiebonen-1kg"
+  }
+]

@@ -17,6 +17,7 @@ class StorePriceRecord(BaseModel):
 
     source_id: str | None = None
     store: StoreName
+    category_group: str | None = None
     category: str | None = None
     brand: str | None = None
     original_name: str = Field(min_length=1)

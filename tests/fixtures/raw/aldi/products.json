@@ -1,0 +1,32 @@
+[
+  {
+    "store": "ALDI",
+    "source_id": "aldi-1",
+    "original_name": "Campina Halfvolle Melk 1L",
+    "price": "€1,89",
+    "captured_at": "2026-04-19T10:00:00Z",
+    "category": "Zuivel en eieren",
+    "brand": "Campina",
+    "product_url": "https://www.aldi.nl/product/halfvolle-melk"
+  },
+  {
+    "store": "ALDI",
+    "source_id": "aldi-2",
+    "original_name": "Appelsap 6 x 200 ml",
+    "price": "€2,79",
+    "captured_at": "2026-04-19T10:01:00Z",
+    "category": "Frisdrank en sappen",
+    "brand": "ALDI",
+    "product_url": "https://www.aldi.nl/product/appelsap-6x200ml"
+  },
+  {
+    "store": "ALDI",
+    "source_id": "aldi-bad-1",
+    "original_name": "Promotional item",
+    "price": "gratis",
+    "captured_at": "2026-04-19T10:02:00Z",
+    "category": "Frisdrank en sappen",
+    "brand": "ALDI",
+    "product_url": "https://www.aldi.nl/product/promotional-item"
+  }
+]

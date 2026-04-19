@@ -53,6 +53,24 @@ savebasket-scraper/
 
 ## Usage
 
+### Run Sprint 1 Normalization Demo
+
+```bash
+python -m savebasket_data demo-normalization
+```
+
+This reads [tests/fixtures/raw/normalization_demo.json](/workspaces/savebasket-scraper/tests/fixtures/raw/normalization_demo.json), normalizes 10 mixed sample products, and prints before/after output plus one validated import payload per store. Normalized records now keep `category_group` and `category` as separate taxonomy fields.
+
+### Run Sprint 2 Store Imports
+
+```bash
+python -m savebasket_data run-aldi-import
+python -m savebasket_data run-jumbo-import
+python -m savebasket_data run-vomar-import --fixture-path tests/fixtures/raw/vomar/products.json
+```
+
+`run-aldi-import` and `run-jumbo-import` now scrape the full live catalog for each store. All three commands also accept `--fixture-path` if you want deterministic input for testing. `run-vomar-import` still requires a fixture because Vomar is returning `403` to this environment.
+
 ### Run All Scrapers (Recommended)
 
 Run the complete pipeline - scrape all stores, collect data, and deduplicate:

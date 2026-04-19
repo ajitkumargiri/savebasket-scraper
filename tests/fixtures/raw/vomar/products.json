@@ -1,0 +1,32 @@
+[
+  {
+    "store": "Vomar",
+    "source_id": "vomar-1",
+    "original_name": "Volkoren Brood 800g",
+    "price": "€2,29",
+    "captured_at": "2026-04-19T10:00:00Z",
+    "category": "Brood en gebak",
+    "brand": "Vomar",
+    "product_url": "https://www.vomar.nl/product/volkoren-brood"
+  },
+  {
+    "store": "Vomar",
+    "source_id": "vomar-2",
+    "original_name": "Kaasplakken Jong 150 gram",
+    "price": "2,59",
+    "captured_at": "2026-04-19T10:01:00Z",
+    "category": "Zuivel, boter en eieren",
+    "brand": "Vomar",
+    "product_url": "https://www.vomar.nl/product/kaasplakken-jong"
+  },
+  {
+    "store": "unknown",
+    "source_id": "vomar-bad-1",
+    "original_name": "Mystery Product 250 g",
+    "price": "1.00",
+    "captured_at": "2026-04-19T10:02:00Z",
+    "category": "Seizoensspecials",
+    "brand": "Unknown",
+    "product_url": "https://www.vomar.nl/product/mystery-product"
+  }
+]

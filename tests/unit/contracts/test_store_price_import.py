@@ -15,7 +15,8 @@ def test_store_price_import_payload_validates() -> None:
             StorePriceRecord(
                 source_id="aldi-1",
                 store="ALDI",
-                category="dairy",
+                category_group="zuivel-boter-en-eieren",
+                category="verse-zuivel",
                 brand="Campina",
                 original_name="Campina Halfvolle Melk 1L",
                 normalized_name="campina halfvolle melk 1 l",
@@ -29,4 +30,5 @@ def test_store_price_import_payload_validates() -> None:
     )
 
     assert payload.store == "ALDI"
-    assert payload.records[0].normalized_name == "campina halfvolle melk 1 l"
+    assert payload.records[0].category_group == 'zuivel-boter-en-eieren'
+    assert payload.records[0].category == 'verse-zuivel'
