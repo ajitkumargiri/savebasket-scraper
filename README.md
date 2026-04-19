@@ -173,6 +173,18 @@ See `requirements.txt` for dependencies.
 - 🔒 **User-agent spoofing**: Mimics real browser to avoid blocks
 - 📌 **Latest file pattern**: Each scraper saves a "latest" version for easy access
 
+## MVP Blueprint
+
+This repository currently provides the ingestion layer for SaveBasket. The implementation-ready plan for the revised 4-store, offer-aware MVP lives in [docs/mvp-blueprint.md](/workspaces/savebasket-scraper/docs/mvp-blueprint.md).
+
+That document defines:
+
+- the reduced PostgreSQL schema
+- import and comparison JSON contracts
+- the AH saved-HTML workflow
+- the manual offers import flow
+- the 4-week delivery plan
+
 ## Troubleshooting
 
 ### Browser not found
