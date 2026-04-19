@@ -1,0 +1,1 @@
+"""Product name normalization placeholder for Sprint 1."""

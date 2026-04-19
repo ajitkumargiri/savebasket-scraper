@@ -1,0 +1,1 @@
+"""Manual offers JSON parser placeholder for Sprint 3."""

@@ -1,0 +1,1 @@
+"""Category mapping placeholder for Sprint 1."""

@@ -1,0 +1,1 @@
+"""Internal application import client placeholder for Sprint 4."""

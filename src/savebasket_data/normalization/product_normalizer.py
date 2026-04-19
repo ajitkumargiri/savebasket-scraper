@@ -1,0 +1,1 @@
+"""Canonical product normalization placeholder for Sprint 1."""

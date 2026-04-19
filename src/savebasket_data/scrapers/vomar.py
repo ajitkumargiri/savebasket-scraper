@@ -1,0 +1,1 @@
+"""Vomar scraper package module placeholder for Sprint 2."""
