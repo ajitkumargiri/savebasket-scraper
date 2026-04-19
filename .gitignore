@@ -138,6 +138,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+source/
 env/
 venv/
 ENV/
@@ -190,6 +191,18 @@ cython_debug/
 
 # Ruff stuff:
 .ruff_cache/
+
+# SaveBasket runtime artifacts
+data/*
+!data/raw/
+!data/normalized/
+!data/manifests/
+data/raw/*
+!data/raw/.gitkeep
+data/normalized/*
+!data/normalized/.gitkeep
+data/manifests/*
+!data/manifests/.gitkeep
 
 # PyPI configuration file
 .pypirc
